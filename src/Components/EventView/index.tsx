@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { Paper, Box } from '@material-ui/core';
 import EventDetailsView from '../EventDetailsView';
 import { store } from '../../Store';
 
@@ -35,8 +34,8 @@ function EventView(props: any) {
       <div style={{ textAlign: 'center' }}>{props.events.name}</div>
       <hr />
       {props.events?.markets.map((market: any, index: number) => (
-        <React.Fragment>
-          <EventDetailsView market={market} key={index} addSelection={addSelection} />
+        <React.Fragment key={index}>
+          <EventDetailsView market={market} addSelection={addSelection} />
           <hr />
           <br style={{ marginTop: '20px' }} />
         </React.Fragment>
